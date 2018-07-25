@@ -1,0 +1,89 @@
+The following is a list of css-like keys, etc that you can edit/implement in your scripts::
+=============================================================
+  !!If you don't know how CSS works, this might be hard. Consider a CSS tutorial!!
+=============================================================
+Styles
+---------
+textcolor
+bgcolor
+shadowtextcolor
+selectedtextcolor
+selectedbgcolor
+render
+render_bg
+padding ; padding-left ; padding-right ; padding-top ; padding-bottom ;
+inset
+image
+font-family
+font-weight
+font-size
+font-style
+corner_rounding
+===================
+Font Flags
+---------
+hover
+active
+focus
+selected
+disabled
+scrollbar
+framefocus
+===================
+.layout controls
+---------
+Place
+Region
+__________
+^^params^^
+__________
+controls
+region
+name
+start
+dir
+align
+margin
+margin-left ; margin-right ; margin-top ; margin-bottom ;
+spacing
+overflow
+allow-horizontal ; allow-vertical ; allow-both ; scroll-horizontal ; scroll-vertical ; scroll-both ;
+x,y
+width
+height
+===================
+Render Commands
+===================
+fill
+image
+image_scale
+image_proportional
+gradient
+dashedrect
+===================
+||  Controls  Example||
+===================
+<pre>"resource/layout/layoutdebugdialog.layout"
+{
+        controls
+        {
+                wiki_link { controlname="URLLabel" labeltext="VGUI editor wiki page"  urltext="https://intranet.valvesoftware.com/wiki/index.php/VGUI_Editing" }
+        }
+        
+        layout
+        {
+                ...
+        
+                place { control="wiki_link" align=bottom width="max" margin=16 margin-bottom=12 margin-right=16 }
+        }
+
+}
+</pre> 
+================
+Good options for ^^^ controlname
+===================
+Label
+ImagePanel
+Button
+CheckButton
+RadioButton
